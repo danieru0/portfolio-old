@@ -9,6 +9,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 const htmlReplace = require('gulp-html-replace');
 const htmlMin = require('gulp-htmlmin');
+const eslint = require('gulp-eslint');
 
 gulp.task('reload', () => {
     browserSync.reload();
@@ -24,6 +25,13 @@ gulp.task('sass', () => {
         .pipe(browserSync.stream());
 });
 
+gulp.task('eslint', () => {
+    return gulp.src(['./app/scripts/**/*.js'])
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(eslint.failAfterError());
+})
+
 gulp.task('serve', gulp.series('sass', () => {
     browserSync({
         server: './app'
@@ -31,6 +39,7 @@ gulp.task('serve', gulp.series('sass', () => {
 
     gulp.watch('./app/*.html').on('change', browserSync.reload);
     gulp.watch('./app/scss/**/*.scss', gulp.series('sass')).on('change', browserSync.reload);
+    gulp.watch('./app/scripts/**/*.js', gulp.series('eslint')).on('change', browserSync.reload);
 }));
 
 gulp.task('css', () => {

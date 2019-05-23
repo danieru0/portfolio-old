@@ -1,0 +1,11 @@
+{
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "extends": "gulp",
+    "rules": {
+        "no-console": "off"
+    }
+}
