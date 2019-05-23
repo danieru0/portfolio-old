@@ -1,0 +1,8 @@
+@mixin text($font-size, $text-transform) {
+	margin: 0;
+	color: $font-color;
+	font-size: $font-size;
+	text-transform: $text-transform;
+	font-family: $main-font;
+	font-weight: 300;
+}

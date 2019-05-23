@@ -12,65 +12,65 @@ const htmlMin = require('gulp-htmlmin');
 const eslint = require('gulp-eslint');
 
 gulp.task('reload', () => {
-    browserSync.reload();
+	browserSync.reload();
 });
 
 gulp.task('sass', () => {
-    return gulp.src('./app/scss/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer({
-            browsers: ['last 3 versions']
-        }))
-        .pipe(gulp.dest('./app'))
-        .pipe(browserSync.stream());
+	return gulp.src('./app/scss/**/*.scss')
+		.pipe(sass().on('error', sass.logError))
+		.pipe(autoprefixer({
+			browsers: ['last 3 versions']
+		}))
+		.pipe(gulp.dest('./app'))
+		.pipe(browserSync.stream());
 });
 
 gulp.task('eslint', () => {
-    return gulp.src(['./app/scripts/**/*.js'])
-        .pipe(eslint())
-        .pipe(eslint.format())
-        .pipe(eslint.failAfterError());
+	return gulp.src(['./app/scripts/main.js'])
+		.pipe(eslint())
+		.pipe(eslint.format())
+		.pipe(eslint.failAfterError());
 })
 
 gulp.task('serve', gulp.series('sass', () => {
-    browserSync({
-        server: './app'
-    });
+	browserSync({
+		server: './app',
+	});
 
-    gulp.watch('./app/*.html').on('change', browserSync.reload);
-    gulp.watch('./app/scss/**/*.scss', gulp.series('sass')).on('change', browserSync.reload);
-    gulp.watch('./app/scripts/**/*.js', gulp.series('eslint')).on('change', browserSync.reload);
+	gulp.watch('./app/*.html').on('change', browserSync.reload);
+	gulp.watch('./app/scss/**/*.scss', gulp.series('sass')).on('change', browserSync.reload);
+	gulp.watch('./app/scripts/**/*.js', gulp.series('eslint')).on('change', browserSync.reload);
 }));
 
 gulp.task('css', () => {
-    return gulp.src('./app/scss/**/*.scss')
-        .pipe(concat('style.css'))
-        .pipe(postcss([cssnano]))
-        .pipe(gulp.dest('./dist'))
+	return gulp.src('./app/scss/**/*.scss')
+		.pipe(concat('style.css'))
+		.pipe(postcss([cssnano]))
+		.pipe(gulp.dest('./dist'));
 })
 
 gulp.task('js', () => {
-    return gulp.src('./app/scripts/**/*.js')
-        .pipe(concat('script.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('./dist'))
+	return gulp.src('./app/scripts/**/*.js')
+		.pipe(concat('script.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('./dist'));
 })
 
 gulp.task('html', () => {
-    return gulp.src('./app/*.html')
-        .pipe(htmlReplace({
-            'js': 'script.js'
-        }))
-        .pipe(htmlMin({
-            sortAttributes: true,
-            sortClassName: true,
-            collapseWhitespace: true
-        }))
-        .pipe(gulp.dest('./dist'))
+	return gulp.src('./app/*.html')
+		.pipe(htmlReplace({
+			js: 'script.js',
+		}))
+		.pipe(htmlMin({
+			sortAttributes: true,
+			sortClassName: true,
+			collapseWhitespace: true,
+		}))
+		.pipe(gulp.dest('./dist'));
 })
 
 gulp.task('clean', () => {
-    return del('./dist');
+	return del('./dist');
 })
 
 gulp.task('build', gulp.series('clean', 'css', 'js', 'html'));

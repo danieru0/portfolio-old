@@ -1,15 +1,45 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    
-    <!-- build:js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
-</body>
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="style.css">
+		<title>Daniel Dąbrowski - Portfolio</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header class="hero">
+			<div id="parallax-scene" class="hero__background">
+				<img data-depth="0.2" class="background__image" src="imgs/header.jpg">
+			</div>
+			<div class="hero__content">
+				<h1 class="hero__name">Daniel 
+					Dąbrowski
+				</h1>
+				<h2 class="hero__title">Front end developer</h2>
+				<div class="hero__skills">
+					<img src="imgs/react.png" alt="I know: React" class="skills__icon">
+					<img src="imgs/redux.png" alt="I know: Redux" class="skills__icon">
+					<img src="imgs/html.svg" alt="I know: Html" class="skills__icon">
+					<img src="imgs/css3.png" alt="I know: Css3" class="skills__icon">
+					<img src="imgs/javascript.svg" alt="I know: Javascript" class="skills__icon">
+					<img src="imgs/node.png" alt="I know: NodeJS" class="skills__icon">
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="projects">
+
+			</section>
+		</main>
+		<!-- build:js -->
+		<script src="scripts/parallax.min.js"></script>
+		<script>
+			let parallaxScene = document.getElementById('parallax-scene');
+	 		let parallaxInstance = new Parallax(parallaxScene);
+		</script>
+		<script src="scripts/main.js"></script>
+		<!-- endbuild -->
+	</body>
 </html>

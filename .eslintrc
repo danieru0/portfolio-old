@@ -6,6 +6,8 @@
     },
     "extends": "gulp",
     "rules": {
-        "no-console": "off"
+        "no-console": "off",
+		"indent": ["error", "tab"],
+		"max-len": "off"
     }
 }

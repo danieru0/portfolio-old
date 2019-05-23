@@ -1,6 +1,12 @@
-$elo: purple;
+// Normalize
+@import 'helpers/normalize.scss';
 
-body {
-    background: $elo;
-    color: white;
-}
+// Params
+@import 'helpers/parameters';
+
+// Mixins
+@import 'helpers/mixins';
+
+// Components
+@import 'components/hero';
+@import 'components/projects';
