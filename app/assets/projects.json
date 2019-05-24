@@ -1,6 +1,12 @@
 {
 	"1": {
 		"title": "Notes",
-		"description": "siema"
+		"description": "Notes to aplikacja napisana w Reatcie z wykorzystaniem Redux'a",
+		"image": "imgs/notesapp.png",
+		"languages": {
+			"1": "React",
+			"2": "Redux",
+			"3": "Styled components"
+		}
 	}
 }

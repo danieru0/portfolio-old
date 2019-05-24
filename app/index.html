@@ -38,25 +38,25 @@
 			<section class="projects">
 				<h2 class="projects__head">Projekty</h2>
 				<div class="projects__wrapper">
-				<div class="projects__project" tabindex="1">
+				<div id="1" class="projects__project" tabindex="1">
 					<img class="project__image" src="imgs/notesapp.png" alt="Nazwa projektu:">
 					<div class="project__info">
 						<h3 class="project__name">Notes</h3>
 					</div>
 				</div>
-				<div class="projects__project" tabindex="1">
+				<div id="2" class="projects__project" tabindex="1">
 					<img class="project__image" src="imgs/windowsapp.jpg" alt="Nazwa projektu:">
 					<div class="project__info">
 						<h3 class="project__name">Windows</h3>
 					</div>
 				</div>
-				<div class="projects__project" tabindex="1">
+				<div id="2" class="projects__project" tabindex="1">
 					<img class="project__image" src="imgs/windowsapp.jpg" alt="Nazwa projektu:">
 					<div class="project__info">
 						<h3 class="project__name">Windows</h3>
 					</div>
 				</div>
-				<div class="projects__project" tabindex="1">
+				<div id="2" class="projects__project" tabindex="1">
 					<img class="project__image" src="imgs/windowsapp.jpg" alt="Nazwa projektu:">
 					<div class="project__info">
 						<h3 class="project__name">Windows</h3>
@@ -82,6 +82,21 @@
 					<p class="information__text">dabrowskidaniel006@gmail.com</p>
 				</div>
 			</section>
+			<div id="modal-container" class="project__modalContainer">
+				<div id="modal" class="modalContainer__modal">
+					<button id="modal-close" class="modal__close">
+						<span class="fa fa-times"></span>
+					</button>
+					<span id="modal-image" class="modal__image"></span>
+					<div class="modal__content">
+						<p id="modal-title" class="modal__title"></p>
+						<span class="modal__line"></span>
+						<p id="modal-desc" class="modal__desc"></p>
+						<ul id="modal-list" class="modal__list">
+						</ul>
+					</div>
+				</div>
+			</div>
 		</main>
 		<footer class="footer">
 			<p class="footer__text">Daniel Dąbrowski &copy; 2019</p>

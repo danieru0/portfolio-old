@@ -10,13 +10,42 @@
 	};
 
 	let projects = document.querySelectorAll('.projects__project');
+	let modalContainer = document.getElementById('modal-container');
+	let modal = document.getElementById('modal');
+	let modalClose = document.getElementById('modal-close');
+	let modalTitle = document.getElementById('modal-title');
+	let modalDesc = document.getElementById('modal-desc');
+	let modalList = document.getElementById('modal-list');
+	let modalImage = document.getElementById('modal-image');
 	projects.forEach(project => {
-		project.addEventListener('click', () => showProjectInfo(project));
+		project.addEventListener('click', () => showProjectInfo(project.id));
 	});
 
-	function showProjectInfo() {
+	modalClose.addEventListener('click', closeModal);
+
+	function closeModal() {
+		modal.classList.remove('active');
+		modalContainer.classList.remove('active');
+		modalList.innerHTML = '';
+	}
+
+	function showProjectInfo(id) {
+		modalContainer.classList.add('active');
 		fetch('../assets/projects.json')
 			.then(resp => resp.json())
-			.then(resp => console.log(resp));
+			.then(resp => {
+				let projectData = resp[id];
+				modalTitle.textContent = projectData.title;
+				modalDesc.textContent = projectData.description;
+				modalImage.style.backgroundImage = `url('${projectData.image}')`;
+				Object.keys(projectData.languages).map(item => {
+					let lang = projectData.languages[item];
+					let listItem = document.createElement('li');
+					listItem.classList.add('modal__item');
+					listItem.textContent = lang;
+					modalList.appendChild(listItem);
+				});
+				modal.classList.add('active');
+			});
 	}
 })();
