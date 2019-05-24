@@ -54,4 +54,26 @@
 				modal.classList.add('active');
 			});
 	}
+
+	let showMoreBtn = document.getElementById('showmore-btn');
+	let allProjects = document.querySelectorAll('.projects__project');
+	let activeProjectsDefault = 4;
+	showMoreBtn.addEventListener('click', (e) => {
+		if (e.target.textContent !== 'Mniej') {
+			let disabledProjects = document.querySelectorAll('.projects__project.disabled');
+			if (disabledProjects.length) {
+				for (let i = 0; i < 4; i++) {
+					activeProjectsDefault++;
+					disabledProjects[i] ? disabledProjects[i].classList.remove('disabled') : '';
+					activeProjectsDefault === allProjects.length ? e.target.textContent = 'Mniej' : '';
+				}
+			}
+		} else {
+			activeProjectsDefault = 4;
+			e.target.textContent = 'Więcej';
+			for (let i = 4; i < allProjects.length; i++) {
+				allProjects[i].classList.add('disabled');
+			}
+		}
+	});
 })();

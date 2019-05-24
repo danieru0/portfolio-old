@@ -533,6 +533,8 @@ template {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
+    .projects .projects__wrapper .projects__project.disabled {
+      display: none; }
     .projects .projects__wrapper .projects__project {
       width: 90%;
       height: 200px;
@@ -631,9 +633,7 @@ template {
 
 @media (min-width: 1142px) {
   .projects {
-    height: 900px; }
-    .projects .projects__head {
-      margin-top: -30px; }
+    padding: 30px 0px; }
     .projects .projects__wrapper {
       width: 80%; }
       .projects .projects__wrapper .projects__project {
@@ -642,7 +642,7 @@ template {
 
 @media (min-width: 1435px) {
   .projects {
-    height: 1100px; }
+    height: auto; }
     .projects .projects__wrapper .projects__project {
       height: 300px;
       margin: 50px 50px; } }
@@ -669,9 +669,9 @@ template {
           align-items: center;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity .4s, visibility .4s;
-  -o-transition: opacity .4s, visibility .4s;
-  transition: opacity .4s, visibility .4s; }
+  -webkit-transition: opacity .2s, visibility .4s;
+  -o-transition: opacity .2s, visibility .4s;
+  transition: opacity .2s, visibility .4s; }
   .project__modalContainer .modalContainer__modal {
     width: 1200px;
     height: 700px;
