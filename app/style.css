@@ -1,3 +1,14 @@
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -375,4 +386,74 @@ template {
 
 .projects {
   width: 100%;
-  height: 500px; }
+  background: #1F2D56;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 40px; }
+  .projects .projects__head {
+    margin: 0;
+    color: #ffffff;
+    font-size: 52px;
+    text-transform: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 50px; }
+  .projects .projects__project {
+    width: 90%;
+    height: 200px;
+    margin: 25px 0px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    padding: 0; }
+    .projects .projects__project .project__image {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .projects .projects__project .project__info {
+      width: 100%;
+      height: 60px;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.3);
+      bottom: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .projects .projects__project .project__info .project__name {
+        margin: 0;
+        color: #ffffff;
+        font-size: 28px;
+        text-transform: none;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300; }
+  .projects .projects__more-btn {
+    width: 132px;
+    height: 42px;
+    background: #c34366;
+    border: none;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+    margin-top: 10px; }
+
+.contact {
+  width: 100%;
+  height: 500px;
+  background: #232949; }
