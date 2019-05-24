@@ -23,6 +23,12 @@
 
 	modalClose.addEventListener('click', closeModal);
 
+	modalContainer.addEventListener('click', (e) => {
+		if (e.target.className === 'project__modalContainer active') {
+			closeModal();
+		}
+	});
+
 	function closeModal() {
 		modal.classList.remove('active');
 		modalContainer.classList.remove('active');

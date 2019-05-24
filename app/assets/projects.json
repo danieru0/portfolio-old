@@ -6,7 +6,11 @@
 		"languages": {
 			"1": "React",
 			"2": "Redux",
-			"3": "Styled components"
+			"3": "Styled components",
+			"4": "Firebase (Authentication, Firestore, Hosting)",
+			"5": "Express.js",
+			"6": "MongoDB",
+			"7": "Socket.io"
 		}
 	}
 }

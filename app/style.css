@@ -704,7 +704,7 @@ template {
         display: flex;
         margin-top: auto; }
         .project__modalContainer .modalContainer__modal .modal__content .modal__list .modal__item {
-          font-size: 18px;
+          font-size: 16px;
           margin: 0px 10px; }
 
 .project__modalContainer.active {
@@ -714,6 +714,27 @@ template {
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
             transform: translateY(0); }
+
+@media (max-width: 1325px) {
+  .project__modalContainer .modalContainer__modal {
+    width: 90%; } }
+
+@media (max-width: 1225px) {
+  .project__modalContainer .modalContainer__modal .modal__content .modal__title {
+    font-size: 26px; }
+  .project__modalContainer .modalContainer__modal .modal__content .modal__desc {
+    font-size: 20px; }
+  .project__modalContainer .modalContainer__modal .modal__content .modal__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .project__modalContainer .modalContainer__modal .modal__content .modal__list .modal__item {
+      margin: 10px 5px; } }
+
+@media (max-width: 655px) {
+  .project__modalContainer .modalContainer__modal .modal__image {
+    display: none; }
+  .project__modalContainer .modalContainer__modal .modal__content {
+    width: 100%; } }
 
 .contact {
   width: 100%;
