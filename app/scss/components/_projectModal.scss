@@ -138,3 +138,11 @@
 		}
 	}
 }
+
+@media (max-height: 745px) {
+	.project__modalContainer {
+		.modalContainer__modal {
+			height: 90%;
+		}
+	}
+}
