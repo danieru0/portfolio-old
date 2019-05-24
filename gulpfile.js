@@ -12,6 +12,7 @@ const htmlMin = require('gulp-htmlmin');
 const eslint = require('gulp-eslint');
 const newer = require('gulp-newer');
 const imagemin = require('gulp-imagemin');
+const replace = require('gulp-replace');
 
 gulp.task('reload', () => {
 	browserSync.reload();
@@ -57,6 +58,7 @@ gulp.task('css', () => {
 gulp.task('js', () => {
 	return gulp.src('./app/scripts/**/*.js')
 		.pipe(concat('script.js'))
+		.pipe(replace('../assets/projects.json', 'assets/projects.json'))
 		.pipe(uglify())
 		.pipe(gulp.dest('./dist'));
 });
@@ -81,10 +83,15 @@ gulp.task('imgs', () => {
 		.pipe(gulp.dest('./dist/imgs'));
 });
 
+gulp.task('assets', () => {
+	return gulp.src('./app/assets/**/*')
+		.pipe(gulp.dest('./dist/assets'));
+});
+
 gulp.task('clean', () => {
 	return del('./dist');
 });
 
-gulp.task('build', gulp.series('clean', 'css', 'js', 'html', 'imgs'));
+gulp.task('build', gulp.series('clean', 'css', 'js', 'html', 'imgs', 'assets'));
 
 gulp.task('dev', gulp.series('serve'));
