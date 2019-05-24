@@ -12,35 +12,43 @@
 		margin-bottom: 50px;
 	}
 
-	.projects__project {
-		width: 90%;
-		height: 200px;
-		margin: 25px 0px;
-		position: relative;
-		cursor: pointer;
-		border: none;
-		padding: 0;
+	.projects__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
 
-		.project__image {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-
-		.project__info {
-			width: 100%;
-			height: 60px;
-			position: absolute;
-			background: $overlay-color;
-			bottom: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-			.project__name {
-				@include text(28px, none);
+		.projects__project {
+			width: 90%;
+			height: 200px;
+			margin: 25px 25px;
+			position: relative;
+			cursor: pointer;
+			border: none;
+			padding: 0;
+	
+			.project__image {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+	
+			.project__info {
+				width: 100%;
+				height: 60px;
+				position: absolute;
+				background: $overlay-color;
+				bottom: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+	
+				.project__name {
+					@include text(28px, none);
+				}
 			}
 		}
 	}
@@ -54,5 +62,69 @@
 		font-family: $main-font;
 		cursor: pointer;
 		margin-top: 10px;
+	}
+}
+
+@media (min-width: 432px) {
+	.projects {
+		.projects__wrapper {
+			.projects__project {
+				height: 220px;
+			}
+		}
+	}
+}
+
+@media (min-width: 578px) {
+	.projects {
+		justify-content: center;
+		.projects__wrapper {
+			.projects__project {
+				width: 400px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1142px) {
+	.projects {
+		height: 900px;
+
+		.projects__head {
+			margin-top: -30px;
+		}
+
+		.projects__wrapper {
+			width: 80%;
+
+
+			.projects__project {
+				width: 40%;
+				margin: 42px 42px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1435px) {
+	.projects {
+		height: 1100px;
+		.projects__wrapper {
+			.projects__project {
+				height: 300px;
+				margin: 50px 50px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1680px) {
+	.projects {
+		.projects__wrapper {
+			.projects__project {
+				width: 532px;
+				margin: 60px 60px;
+			}
+		}
 	}
 }
