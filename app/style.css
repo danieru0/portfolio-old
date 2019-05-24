@@ -455,5 +455,52 @@ template {
 
 .contact {
   width: 100%;
-  height: 500px;
-  background: #232949; }
+  background: #323966;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 40px;
+  padding-top: 40px; }
+  .contact .contact__head {
+    margin: 0;
+    color: #ffffff;
+    font-size: 52px;
+    text-transform: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    text-align: center; }
+  .contact .contact__information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+    margin: 10px 0px; }
+    .contact .contact__information .information__icon {
+      color: #c34366;
+      font-size: 22px;
+      margin-right: 5px;
+      position: absolute;
+      left: -28px; }
+    .contact .contact__information .information__text {
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 300; }
+    .contact .contact__information .information__link {
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 300;
+      text-decoration: none;
+      cursor: pointer; }
+    .contact .contact__information:last-of-type {
+      margin-left: 20px; }
