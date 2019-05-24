@@ -525,6 +525,9 @@ template {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: 40px;
   padding-top: 40px; }
   .contact .contact__head {
@@ -563,6 +566,21 @@ template {
       cursor: pointer; }
     .contact .contact__information:last-of-type {
       margin-left: 20px; }
+
+@media (min-width: 920px) {
+  .contact {
+    height: 450px; }
+    .contact .contact__head {
+      margin-bottom: 20px; }
+    .contact .contact__information {
+      margin-left: 11px; }
+      .contact .contact__information .information__text {
+        font-size: 30px; }
+      .contact .contact__information .information__icon {
+        font-size: 40px;
+        left: -45px; }
+      .contact .contact__information .information__link {
+        font-size: 30px; } }
 
 .footer {
   width: 100%;
