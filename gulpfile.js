@@ -10,6 +10,8 @@ const uglify = require('gulp-uglify-es').default;
 const htmlReplace = require('gulp-html-replace');
 const htmlMin = require('gulp-htmlmin');
 const eslint = require('gulp-eslint');
+const newer = require('gulp-newer');
+const imagemin = require('gulp-imagemin');
 
 gulp.task('reload', () => {
 	browserSync.reload();
@@ -19,7 +21,7 @@ gulp.task('sass', () => {
 	return gulp.src('./app/scss/**/*.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer({
-			browsers: ['last 3 versions']
+			browsers: ['last 3 versions'],
 		}))
 		.pipe(gulp.dest('./app'))
 		.pipe(browserSync.stream());
@@ -30,7 +32,7 @@ gulp.task('eslint', () => {
 		.pipe(eslint())
 		.pipe(eslint.format())
 		.pipe(eslint.failAfterError());
-})
+});
 
 gulp.task('serve', gulp.series('sass', () => {
 	browserSync({
@@ -44,17 +46,20 @@ gulp.task('serve', gulp.series('sass', () => {
 
 gulp.task('css', () => {
 	return gulp.src('./app/scss/**/*.scss')
-		.pipe(concat('style.css'))
+		.pipe(sass())
+		.pipe(autoprefixer({
+			browsers: ['last 3 versions'],
+		}))
 		.pipe(postcss([cssnano]))
 		.pipe(gulp.dest('./dist'));
-})
+});
 
 gulp.task('js', () => {
 	return gulp.src('./app/scripts/**/*.js')
 		.pipe(concat('script.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('./dist'));
-})
+});
 
 gulp.task('html', () => {
 	return gulp.src('./app/*.html')
@@ -67,12 +72,19 @@ gulp.task('html', () => {
 			collapseWhitespace: true,
 		}))
 		.pipe(gulp.dest('./dist'));
-})
+});
+
+gulp.task('imgs', () => {
+	return gulp.src('./app/imgs/**/*')
+		.pipe(newer('./dist/imgs'))
+		.pipe(imagemin())
+		.pipe(gulp.dest('./dist/imgs'));
+});
 
 gulp.task('clean', () => {
 	return del('./dist');
-})
+});
 
-gulp.task('build', gulp.series('clean', 'css', 'js', 'html'));
+gulp.task('build', gulp.series('clean', 'css', 'js', 'html', 'imgs'));
 
 gulp.task('dev', gulp.series('serve'));

@@ -1,26 +1,13 @@
-// Visuallyhidden
-.visuallyhidden {
-	border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap;
-}
-
-// Params
+/* Parameters */
 @import 'helpers/parameters';
 
-// Normalize
+/* Normalize */
 @import 'helpers/normalize.scss';
 
-// Mixins
+/* Mixins */
 @import 'helpers/mixins';
 
-// Components
+/* Components */
 @import 'components/loader';
 @import 'components/hero';
 @import 'components/projects';
