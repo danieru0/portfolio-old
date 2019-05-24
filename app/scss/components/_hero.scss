@@ -1,25 +1,36 @@
 .hero {
 	width: 100%;
 	height: 100vh;
+	overflow: hidden;
 	
-	.hero__background {
+	.hero__scaler {
 		width: 100%;
 		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		overflow: hidden;
+		transform: scale(1.02);
 
-		.background__image {
-			width: 200vh;
-		}
-
-		&:after {
-			content: '';
+		.hero__background {
 			width: 100%;
 			height: 100%;
-			position: absolute;
-			background: $overlay-color;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+	
+			.background__image {
+				background: url('imgs/header.jpg');
+				background-size: cover;
+				background-position: center;
+				width: 100%;
+				height: 100%;
+			}
+	
+			&:after {
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				background: $overlay-color;
+			}
 		}
 	}
 

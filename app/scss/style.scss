@@ -11,11 +11,11 @@
     white-space: nowrap;
 }
 
-// Normalize
-@import 'helpers/normalize.scss';
-
 // Params
 @import 'helpers/parameters';
+
+// Normalize
+@import 'helpers/normalize.scss';
 
 // Mixins
 @import 'helpers/mixins';
