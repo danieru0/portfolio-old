@@ -1,0 +1,40 @@
+.loader {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	overflow: hidden;
+	z-index: 2;
+	background: $main-background-color;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: opacity .3s, visibility .3s;
+
+	.loader__icon {
+		width: 60px;
+		height: 60px;
+		background: $elements-color;
+		border-radius: 50%;
+		animation-name: loader;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+	}
+}
+
+.loader.done {
+	opacity: 0;
+	visibility: hidden;
+}
+
+@keyframes loader {
+	from {
+		transform: scale(0);
+		opacity: 1;
+	}
+	to {
+		transform: scale(1);
+		opacity: 0;
+	}
+}

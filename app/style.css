@@ -318,6 +318,64 @@ template {
 [hidden] {
   display: none; }
 
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 2;
+  background: #1F2D56;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: opacity .3s, visibility .3s;
+  -o-transition: opacity .3s, visibility .3s;
+  transition: opacity .3s, visibility .3s; }
+  .loader .loader__icon {
+    width: 60px;
+    height: 60px;
+    background: #c34366;
+    border-radius: 50%;
+    -webkit-animation-name: loader;
+            animation-name: loader;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; }
+
+.loader.done {
+  opacity: 0;
+  visibility: hidden; }
+
+@-webkit-keyframes loader {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1; }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
+
+@keyframes loader {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1; }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
+
 .hero {
   width: 100%;
   height: 100vh;
