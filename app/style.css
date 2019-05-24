@@ -383,9 +383,14 @@ template {
   .hero .hero__scaler {
     width: 100%;
     height: 100%;
-    -webkit-transform: scale(1.02);
-        -ms-transform: scale(1.02);
-            transform: scale(1.02); }
+    -webkit-transform: scale(1.08);
+        -ms-transform: scale(1.08);
+            transform: scale(1.08);
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); }
     .hero .hero__scaler .hero__background {
       width: 100%;
       height: 100%;
@@ -438,7 +443,15 @@ template {
       font-weight: 300;
       text-align: center;
       white-space: pre-line;
-      line-height: 48px; }
+      line-height: 48px;
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1);
+      -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      -o-transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); }
     .hero .hero__content .hero__title {
       margin: 0;
       color: #ffffff;
@@ -446,12 +459,48 @@ template {
       text-transform: none;
       font-family: "Open Sans", sans-serif;
       font-weight: 300;
-      margin-top: 8px; }
+      margin-top: 8px;
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1);
+      -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      -o-transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); }
     .hero .hero__content .hero__skills {
-      margin-top: 10px; }
+      margin-top: 10px;
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1);
+      -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      -o-transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); }
       .hero .hero__content .hero__skills .skills__icon {
         width: 40px;
         height: 40px; }
+
+.hero.show .hero__scaler {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05); }
+
+.hero.show .hero__content .hero__name {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1); }
+
+.hero.show .hero__content .hero__title {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1); }
+
+.hero.show .hero__content .hero__skills {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1); }
 
 .projects {
   width: 100%;
