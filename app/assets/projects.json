@@ -3,6 +3,8 @@
 		"title": "Notes",
 		"description": "Notes to aplikacja napisana w Reatcie z wykorzystaniem Redux'a",
 		"image": "imgs/notesapp.png",
+		"live": "https://elosiktv.github.io/notes/",
+		"src": "https://github.com/elosiktv/notes",
 		"languages": {
 			"1": "React",
 			"2": "Redux",

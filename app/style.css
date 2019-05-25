@@ -312,6 +312,18 @@ template {
   display: none; }
 
 /* Mixins */
+/* Globals */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; }
+
 /* Components */
 .loader {
   width: 100%;
@@ -464,6 +476,11 @@ template {
       transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
       transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); }
     .hero .hero__content .hero__skills {
+      padding: 0;
+      list-style: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
       margin-top: 10px;
       -webkit-transform: scale(1.1);
           -ms-transform: scale(1.1);
@@ -620,7 +637,7 @@ template {
     cursor: pointer;
     margin-top: 10px;
     position: relative;
-    z-index: 1;
+    z-index: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -722,6 +739,20 @@ template {
     -o-transition: transform .4s;
     transition: transform .4s;
     transition: transform .4s, -webkit-transform .4s; }
+    .project__modalContainer .modalContainer__modal .modal__links-wrapper {
+      position: absolute;
+      right: 20px;
+      top: 32px; }
+      .project__modalContainer .modalContainer__modal .modal__links-wrapper .modal__link {
+        color: #ffffff;
+        font-size: 20px;
+        margin: 0px 5px;
+        -webkit-transition: color .3s;
+        -o-transition: color .3s;
+        transition: color .3s;
+        outline: none; }
+        .project__modalContainer .modalContainer__modal .modal__links-wrapper .modal__link:focus, .project__modalContainer .modalContainer__modal .modal__links-wrapper .modal__link:hover {
+          color: gray; }
     .project__modalContainer .modalContainer__modal .modal__close {
       position: absolute;
       color: #ffffff;
@@ -736,7 +767,7 @@ template {
       -o-transition: color .3s;
       transition: color .3s; }
       .project__modalContainer .modalContainer__modal .modal__close:focus, .project__modalContainer .modalContainer__modal .modal__close:hover {
-        color: #cccccc; }
+        color: #b3b3b3; }
     .project__modalContainer .modalContainer__modal .modal__image {
       width: 40%;
       height: 100%;
@@ -758,6 +789,10 @@ template {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; }
+      .project__modalContainer .modalContainer__modal .modal__content .focusguard {
+        width: 30px;
+        height: 30px;
+        background: red; }
       .project__modalContainer .modalContainer__modal .modal__content .modal__title {
         font-size: 30px;
         margin: 0; }

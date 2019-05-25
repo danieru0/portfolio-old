@@ -24,21 +24,33 @@
 					Dąbrowski
 				</h1>
 				<h2 class="hero__title">Front end developer</h2>
-				<div class="hero__skills">
-					<img src="imgs/react.png" alt="Umiem: React" class="skills__icon">
-					<img src="imgs/redux.png" alt="Umiem: Redux" class="skills__icon">
-					<img src="imgs/html.svg" alt="Umiem: Html" class="skills__icon">
-					<img src="imgs/css3.png" alt="Umiem: Css3" class="skills__icon">
-					<img src="imgs/javascript.svg" alt="Umiem: Javascript" class="skills__icon">
-					<img src="imgs/node.png" alt="Umiem: NodeJS" class="skills__icon">
-				</div>
+				<ul class="hero__skills">
+					<li class="skills__item">
+						<img src="imgs/react.png" alt="Umiem: React" class="skills__icon">
+					</li>
+					<li class="skills__item">
+						<img src="imgs/redux.png" alt="Umiem: Redux" class="skills__icon">
+					</li>
+					<li class="skills__item">
+						<img src="imgs/html.svg" alt="Umiem: Html" class="skills__icon">
+					</li>
+					<li class="skills__item">
+						<img src="imgs/css3.png" alt="Umiem: Css3" class="skills__icon">
+					</li>
+					<li class="skills__item">
+						<img src="imgs/javascript.svg" alt="Umiem: Javascript" class="skills__icon">
+					</li>
+					<li class="skills__item">
+						<img src="imgs/node.png" alt="Umiem: NodeJS" class="skills__icon">
+					</li>
+				</ul>
 			</div>
 		</header>
 		<main>
 			<section class="projects">
 				<h2 class="projects__head">Projekty</h2>
 				<div class="projects__wrapper">
-				<div id="1" class="projects__project" tabindex="1">
+				<div id="1" class="projects__project" tabindex="0">
 					<img class="project__image" src="imgs/notesapp.png" alt="Nazwa projektu:">
 					<div class="project__info">
 						<h3 class="project__name">Notes</h3>
@@ -53,7 +65,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="2" class="projects__project" tabindex="1">
+				<div id="2" class="projects__project" tabindex="0">
 					<img class="project__image" src="imgs/windowsapp.jpg" alt="Nazwa projektu:">
 					<div class="project__info">
 						<h3 class="project__name">Windows</h3>
@@ -67,7 +79,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="3" class="projects__project" tabindex="1">
+				<div id="3" class="projects__project" tabindex="0">
 					<img class="project__image" src="imgs/windowsapp.jpg" alt="Nazwa projektu:">
 					<div class="project__info">
 						<h3 class="project__name">Windows</h3>
@@ -81,7 +93,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="4" class="projects__project" tabindex="1">
+				<div id="4" class="projects__project" tabindex="0">
 					<img class="project__image" src="imgs/windowsapp.jpg" alt="Nazwa projektu:">
 					<div class="project__info">
 						<h3 class="project__name">Windows</h3>
@@ -95,7 +107,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="5" class="projects__project disabled" tabindex="1">
+				<div id="5" class="projects__project disabled" tabindex="0">
 					<img class="project__image" src="imgs/windowsapp.jpg" alt="Nazwa projektu:">
 					<div class="project__info">
 						<h3 class="project__name">Windows</h3>
@@ -109,7 +121,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="6" class="projects__project disabled" tabindex="1">
+				<div id="6" class="projects__project disabled" tabindex="0">
 					<img class="project__image" src="imgs/windowsapp.jpg" alt="Nazwa projektu:">
 					<div class="project__info">
 						<h3 class="project__name">Windows</h3>
@@ -123,7 +135,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="7" class="projects__project disabled" tabindex="1">
+				<div id="7" class="projects__project disabled" tabindex="0">
 					<img class="project__image" src="imgs/windowsapp.jpg" alt="Nazwa projektu:">
 					<div class="project__info">
 						<h3 class="project__name">Windows</h3>
@@ -137,7 +149,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="8" class="projects__project disabled" tabindex="1">
+				<div id="8" class="projects__project disabled" tabindex="0">
 					<img class="project__image" src="imgs/windowsapp.jpg" alt="Nazwa projektu:">
 					<div class="project__info">
 						<h3 class="project__name">Windows</h3>
@@ -151,7 +163,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="9" class="projects__project disabled" tabindex="1">
+				<div id="9" class="projects__project disabled" tabindex="0">
 					<img class="project__image" src="imgs/windowsapp.jpg" alt="Nazwa projektu:">
 					<div class="project__info">
 						<h3 class="project__name">Windows</h3>
@@ -165,7 +177,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="10" class="projects__project disabled" tabindex="1">
+				<div id="10" class="projects__project disabled" tabindex="0">
 					<img class="project__image" src="imgs/windowsapp.jpg" alt="Nazwa projektu:">
 					<div class="project__info">
 						<h3 class="project__name">Windows</h3>
@@ -182,7 +194,7 @@
 				</div>
 				<button id="showmore-btn" class="projects__more-btn">
 					<span class="more-btn__circle"></span>
-					Więcej
+					<span class="more-btn__text">Więcej</span>
 				</button>
 			</section>
 			<section class="contact">
@@ -202,15 +214,27 @@
 			</section>
 			<div id="modal-container" class="project__modalContainer">
 				<div id="modal" class="modalContainer__modal">
+					<div class="focusguard" id="focusguard-first" tabindex="0"></div>
 					<button id="modal-close" class="modal__close">
 						<span class="fa fa-times"></span>
 					</button>
 					<span id="modal-image" class="modal__image"></span>
 					<div class="modal__content">
+						<div class="modal__links-wrapper">
+							<a id="modal-live" class="modal__link" href="https://github.com">
+								<p class="visuallyhidden">Link do aplikacji</p>
+								<span class="fa fa-desktop"></span>
+							</a>
+							<a id="modal-src" class="modal__link" href="https://github.com">
+								<p class="visuallyhidden">Link do kodu źródłowego</p>
+								<span class="fa fa-code"></span>
+							</a>
+						</div>
 						<p id="modal-title" class="modal__title"></p>
 						<span class="modal__line"></span>
 						<p id="modal-desc" class="modal__desc"></p>
 						<ul id="modal-list" class="modal__list"></ul>
+						<div class="focusguard" id="focusguard-last" tabindex="0"></div>
 					</div>
 				</div>
 			</div>

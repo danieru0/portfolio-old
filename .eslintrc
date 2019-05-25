@@ -8,6 +8,7 @@
     "rules": {
         "no-console": "off",
 		"indent": ["error", "tab"],
-		"max-len": "off"
+		"max-len": "off",
+		"no-trailing-spaces": "off"
     }
 }

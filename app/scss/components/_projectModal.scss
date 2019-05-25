@@ -21,6 +21,25 @@
 		transform: translateY(100vh);
 		transition: transform .4s;
 
+		.modal__links-wrapper {
+			position: absolute;
+			right: 20px;
+			top: 32px;
+
+			.modal__link {
+				color: $font-color;
+				font-size: 20px;
+				margin: 0px 5px;
+				transition: color .3s;
+				outline: none;
+
+				&:focus,
+				&:hover {
+					color: darken($font-color, 50%);
+				}
+			}
+		}
+
 		.modal__close {
 			position: absolute;
 			color: $font-color;
@@ -35,7 +54,7 @@
 
 			&:focus,
 			&:hover {
-				color: darken($font-color, 20%);
+				color: darken($font-color, 30%);
 			}
 		}
 
@@ -55,6 +74,12 @@
 			box-sizing: border-box;
 			display: flex;
 			flex-direction: column;
+
+			.focusguard {
+				width: 30px;
+				height: 30px;
+				background: red;
+			}
 
 			.modal__title {
 				font-size: 30px;
