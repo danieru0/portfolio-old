@@ -88,10 +88,15 @@ gulp.task('assets', () => {
 		.pipe(gulp.dest('./dist/assets'));
 });
 
+gulp.task('fonts', () => {
+	return gulp.src('./app/fonts/**/*')
+		.pipe(gulp.dest('./dist/fonts'));
+});
+
 gulp.task('clean', () => {
 	return del('./dist');
 });
 
-gulp.task('build', gulp.series('clean', 'css', 'js', 'html', 'imgs', 'assets'));
+gulp.task('build', gulp.series('clean', 'css', 'js', 'html', 'imgs', 'assets', 'fonts'));
 
 gulp.task('dev', gulp.series('serve'));

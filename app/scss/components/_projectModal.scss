@@ -28,10 +28,11 @@
 
 			.modal__link {
 				color: $font-color;
-				font-size: 20px;
+				font-size: 24px;
 				margin: 0px 5px;
 				transition: color .3s;
 				outline: none;
+				text-decoration: none;
 
 				&:focus,
 				&:hover {

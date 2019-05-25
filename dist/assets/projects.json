@@ -1,6 +1,130 @@
 {
 	"1": {
 		"title": "Notes",
-		"description": "siema"
+		"description": "Notes to aplikacja React z wykorzystaniem Redux'a, pozwala ona tworzenie notatek podzielonych na różne tagi które sami możemy stworzyć. Notatki mogą być dodawane do ulubionych, mogą być przenoszone do kosza a stamtąd przywracane bądź usuwane permamentnie. Możemy także przeszukiwać wszystkie notatki bądź notatki z danego tagu. Aplikacja oferuje edytor z trybem read bądź edit oraz funkcją fullscreen. Wszystkie dane przechowywane są przy pomocy Firebase. Użytkownik oczywiście może założyć konto, zalogować się, wylogować oraz zmienić swój avatar.",
+		"image": "imgs/notesapp.png",
+		"live": "https://elosiktv.github.io/notes/",
+		"src": "https://github.com/elosiktv/notes",
+		"languages": {
+			"1": "React",
+			"2": "Redux",
+			"3": "Styled components",
+			"4": "Firebase (Authentication, Firestore, Hosting)"
+		}
+	},
+	"2": {
+		"title": "Chat v2",
+		"description": "Jest to moje drugie podejście do stworzenia chatu: Front-end napisany tradycyjnie w React oraz Redux, natomiast back-endem zajmuje się Express.js. Wszystkie dane zapisywane na MongoDB a komunikacje między użytkownikami zapewnia Socket.io. Mój pierwszy chat został napisany w samym Express.js natomaist był na tyle słaby i zły że postanowiłem napisać go na nowo (Stary chat można znaleźć na moim githubie). Standardowo: Do autoryzacji użyłem podejścia JSON Token, Użytkownicy mogą wyszukiwać profile na których są informacje takie jak: Opis, avatar oraz miejsce zamieszkania. Każdy profil można dodać do chatu i stamtąd pisać. Chat wykrywa linki oraz filmy z Youtub'a. Jeśli będziemy w trakcie pisania z danym użytkownikiem, a on usunie czat - Wszystko zostanie zablokowane a my dostaniemy stosowną informacje.",
+		"image": "imgs/chatv2app.png",
+		"live": "None",
+		"src": "https://github.com/elosiktv/chat-v2",
+		"languages": {
+			"1": "React",
+			"2": "Redux",
+			"3": "Express.js",
+			"4": "MongoDB",
+			"5": "Socket.io"
+		}
+	},
+	"3": {
+		"title": "Windows",
+		"description": "Projekt zrobiony bardziej dla zabawy ale posiada kilka ciekawych funckji. Założeniem było stworzenie aplikacji która 'imitowała' by system operacyjny. Mniej więcej mi się udało. Projekt został napisany przy użyciu React'a oraz Redux'a. W aplikacji możemy tworzyć pliki, odtwarzać filmy, muzykę oraz zdjęcia. Aplikacja posiada programy takie jak: Kalkulator, terminal z różnymi komendami, painta oraz ustawienia. Oprócz tego programy można minimalizować oraz zwiększać ich rozmiar. Można także zmieniać tapete. ",
+		"image": "imgs/windowsapp.jpg",
+		"live": "https://elosiktv.github.io/windows/",
+		"src": "https://github.com/elosiktv/windows",
+		"languages": {
+			"1": "React",
+			"2": "Redux",
+			"3": "Dexie (IndexedDB)"
+		}
+	},
+	"4": {
+		"title": "global",
+		"description": "Jest to PSD to HTML. Do przemieszczania się między sekcjami możemy używać dostarczonego menu, użyć scroll'a, bądź użyć dodatkowe, większe menu. Większe menu zostało bardzo ciekawie zaprojektowane. Do napisania tego użyłem perspective na całą stronę i zabawy transformem. Oprócz tego przy zmianie sekcji zamieniany jest także url, a po odświeżeniu wracamy na poprzednią sekcje.",
+		"image": "imgs/globalapp.png",
+		"live": "https://elosiktv.github.io/global/",
+		"src": "https://github.com/elosiktv/global",
+		"languages": {
+			"1": "HTML",
+			"2": "SCSS",
+			"3": "JavaScript",
+			"4": "Gulp"
+		}
+	},
+	"5": {
+		"title": "poll-app",
+		"description": "Projekt wykonany na wzór strony strawpoll.me. Możemy tworzyć ankiety, opcje ankiety przy jej tworzeniu dodają się dynamicznie. Po utworzeniu ankieta zapisywana jest w MongoDB. Następnie możemy udostępnić ją innym użytkownikom wysyłając im link do niej, bądź poprzez sekcje z wszystkimi ankietami. Sam projekt był moim pierwszym podejściem do wykorzystania React'a i Node.js",
+		"image": "imgs/pollapp.gif",
+		"live": "None",
+		"src": "https://github.com/elosiktv/poll-app",
+		"languages": {
+			"1": "React",
+			"2": "Express.js",
+			"3": "MongoDB"
+		}
+	},
+	"6": {
+		"title": "todo-react",
+		"description": "Popularnym projektem wśród front-endowców jest zdecydowanie todo. Ja nie postanowiłem być odosobniony i też stworzyłem aplikacje todo. Jednakże nie jest to typowa aplikacja todo. Podczas dodawania zadania możemy ustalić kiedy zamierzamy je wykonać, na podstawie tego zostanie on dodany do 4 sekcji: All, Today, Tomorrow oraz Next 7 days. W ten sposób możemy łatwo sprawdzić jakie taski mamy na dziś bądź jutro. Do zadań możemy dostarczyć opis. Wykonane zadania trafią do Completed, a zadania o których zapomnieliśmy trafią do Overdue. Oczywiście zadania możemy usuwać. Oprócz tego aplikacja oferuje widget z aktualną pogodą. Wszystkie dane zapisuje z użyciem Firebase. Niestety najwiekszą wadą tego projektu jest jego wydajność. Za dużo w nim różnorakich map oraz pętli. Mimo wszystko, uważam że warto ową aplikacje zaprezentować. Sam projekt został wrzucony na heroku, stamtąd także pochodzi wersja live, jednakże zajmuje mu trochę uruchomienie tego dlatego jeśli podczas próby sprawdzenia projektu dostaniesz błąd - Zaczekaj kilka chwil i spróbuj ponownie.",
+		"image": "imgs/reactodoapp.png",
+		"live": "https://glacial-peak-74109.herokuapp.com/",
+		"src": "https://github.com/elosiktv/todo-react",
+		"languages": {
+			"1": "React",
+			"2": "Redux",
+			"3": "Material-UI",
+			"4": "Firebase (Authentication, Firestore, Hosting)"
+		}
+	},
+	"7": {
+		"title": "axit",
+		"description": "Zwykłe PSD to HTML. Napisane na początku nauki.",
+		"image": "imgs/axitapp.png",
+		"live": "https://elosiktv.github.io/axit/",
+		"src": "https://github.com/elosiktv/axit",
+		"languages": {
+			"1": "HTML",
+			"2": "SCSS",
+			"3": "JavaScript",
+			"4": "Gulp"
+		}
+	},
+	"8": {
+		"title": "active-box",
+		"description": "Zwykłe PSD to HTML. Napisane na początku nauki.",
+		"image": "imgs/activeboxapp.png",
+		"live": "https://elosiktv.github.io/active-box/",
+		"src": "https://github.com/elosiktv/active-box",
+		"languages": {
+			"1": "HTML",
+			"2": "SCSS",
+			"3": "JavaScript",
+			"4": "Gulp"
+		}
+	},
+	"9": {
+		"title": "pex",
+		"description": "Zwykłe PSD to HTML. Napisane na początku nauki.",
+		"image": "imgs/pexapp.png",
+		"live": "https://elosiktv.github.io/pex/",
+		"src": "https://github.com/elosiktv/pex",
+		"languages": {
+			"1": "HTML",
+			"2": "SCSS",
+			"3": "JavaScript",
+			"4": "Gulp"
+		}
+	},
+	"10": {
+		"title": "sticky-notes",
+		"description": "Pomysł na tą stronę podpatrzyłem kiedyś u kogoś innego, możemy na niej dodawać notatki i przemieszczać je po ekranie, pisać po nich, zwiększać je oraz zamykać. Same notatki zapisywane są w localStorage",
+		"image": "imgs/stickyapp.png",
+		"live": "https://elosiktv.github.io/sticky-notes/",
+		"src": "https://github.com/elosiktv/sticky-notes",
+		"languages": {
+			"1": "HTML",
+			"2": "CSS",
+			"3": "JavaScript"
+		}
 	}
 }
