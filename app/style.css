@@ -772,6 +772,7 @@ template {
       width: 40%;
       height: 100%;
       background-size: cover;
+      background-position: 15%;
       -webkit-box-shadow: 5px -1px 30px -10px inset;
               box-shadow: 5px -1px 30px -10px inset; }
     .project__modalContainer .modalContainer__modal .modal__content {
@@ -789,10 +790,6 @@ template {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; }
-      .project__modalContainer .modalContainer__modal .modal__content .focusguard {
-        width: 30px;
-        height: 30px;
-        background: red; }
       .project__modalContainer .modalContainer__modal .modal__content .modal__title {
         font-size: 30px;
         margin: 0; }
@@ -805,7 +802,8 @@ template {
       .project__modalContainer .modalContainer__modal .modal__content .modal__desc {
         font-size: 22px;
         margin: 0;
-        margin-top: 20px; }
+        margin-top: 20px;
+        overflow-y: auto; }
       .project__modalContainer .modalContainer__modal .modal__content .modal__list {
         list-style: none;
         margin: 0;
@@ -813,10 +811,12 @@ template {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        margin-top: auto; }
+        margin-top: auto;
+        border-top: 1px solid #c34366;
+        padding-top: 3px; }
         .project__modalContainer .modalContainer__modal .modal__content .modal__list .modal__item {
           font-size: 16px;
-          margin: 0px 10px; }
+          margin: 0px 5px; }
 
 .project__modalContainer.active {
   opacity: 1;
@@ -839,7 +839,7 @@ template {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
     .project__modalContainer .modalContainer__modal .modal__content .modal__list .modal__item {
-      margin: 10px 5px; } }
+      margin: 0px 5px; } }
 
 @media (max-width: 655px) {
   .project__modalContainer .modalContainer__modal .modal__image {

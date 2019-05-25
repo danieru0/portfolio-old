@@ -62,6 +62,7 @@
 			width: 40%;
 			height: 100%;
 			background-size: cover;
+			background-position: 15%;
 			box-shadow: 5px -1px 30px -10px inset;
 		}
 
@@ -74,12 +75,6 @@
 			box-sizing: border-box;
 			display: flex;
 			flex-direction: column;
-
-			.focusguard {
-				width: 30px;
-				height: 30px;
-				background: red;
-			}
 
 			.modal__title {
 				font-size: 30px;
@@ -98,6 +93,7 @@
 				font-size: 22px;
 				margin: 0;
 				margin-top: 20px;
+				overflow-y: auto;
 			}
 
 			.modal__list {
@@ -106,10 +102,12 @@
 				padding: 0;
 				display: flex;
 				margin-top: auto;
+				border-top: 1px solid $elements-color;
+				padding-top: 3px;
 
 				.modal__item {
 					font-size: 16px;
-					margin: 0px 10px;
+					margin: 0px 5px;
 				}
 			}
 		}
@@ -148,7 +146,7 @@
 					flex-wrap: wrap;
 
 					.modal__item {
-						margin: 10px 5px;
+						margin: 0px 5px;
 					}
 				}
 			}
