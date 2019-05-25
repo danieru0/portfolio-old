@@ -31,19 +31,6 @@
 			cursor: pointer;
 			padding: 0;
 			outline: none;
-	
-			&:focus,
-			&:hover {
-				.project__info {
-					.project__langs {
-						transform: translateY(0);
-					}
-
-					.project__name {
-						transform: translateY(-250%);
-					}
-				}
-			}
 
 			.project__image {
 				width: 100%;
@@ -55,7 +42,7 @@
 	
 			.project__info {
 				width: 100%;
-				height: 60px;
+				height: 80px;
 				position: absolute;
 				background: rgba(0,0,0,0.6);
 				bottom: 0;
@@ -67,13 +54,10 @@
 	
 				.project__name {
 					@include text(28px, none);
-					position: absolute;
 					transition: transform .4s;
 				}
 
 				.project__langs {
-					position: absolute;
-					transform: translateY(250%);
 					transition: transform .4s;
 
 					.project__lang-list {
@@ -83,6 +67,7 @@
 						display: flex;
 						
 						.lang-list__item {
+							margin: 0px 5px;
 							.lang-list__icon {
 								width: 32px;
 								height: 32px;
@@ -148,6 +133,29 @@
 		.projects__wrapper {
 			.projects__project {
 				width: 400px;
+	
+				&:focus,
+				&:hover {
+					.project__info {
+						.project__langs {
+							transform: translateY(0);
+						}
+	
+						.project__name {
+							transform: translateY(-250%);
+						}
+					}
+				}
+
+				.project__info {
+					.project__name {
+						position: absolute;
+					}
+					.project__langs {
+						position: absolute;
+						transform: translateY(250%);
+					}
+				}
 			}
 		}
 	}
