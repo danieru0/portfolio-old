@@ -19,6 +19,11 @@
 	let modalImage = document.getElementById('modal-image');
 	projects.forEach(project => {
 		project.addEventListener('click', () => showProjectInfo(project.id));
+		project.addEventListener('keypress', (e) => {
+			if (!modal.classList.contains('active')) {
+				e.key === 'Enter' ? showProjectInfo(project.id) : '';
+			}
+		});
 	});
 
 	modalClose.addEventListener('click', closeModal);
@@ -26,6 +31,12 @@
 	modalContainer.addEventListener('click', (e) => {
 		if (e.target.className === 'project__modalContainer active') {
 			closeModal();
+		}
+	});
+
+	document.addEventListener('keyup', (e) => {
+		if (modal.classList.contains('active')) {
+			e.key === 'Escape' ? closeModal() : '';
 		}
 	});
 

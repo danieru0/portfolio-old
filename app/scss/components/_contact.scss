@@ -40,6 +40,12 @@
 			font-weight: 300;
 			text-decoration: none;
 			cursor: pointer;
+			transition: color .3s;
+
+			&:focus,
+			&:hover {
+				color: darken($font-color, 20%);
+			}
 		}
 
 		&:last-of-type {

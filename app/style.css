@@ -541,12 +541,13 @@ template {
       margin: 25px 25px;
       position: relative;
       cursor: pointer;
-      padding: 0; }
-      .projects .projects__wrapper .projects__project:hover .project__info .project__langs {
+      padding: 0;
+      outline: none; }
+      .projects .projects__wrapper .projects__project:focus .project__info .project__langs, .projects .projects__wrapper .projects__project:hover .project__info .project__langs {
         -webkit-transform: translateY(0);
             -ms-transform: translateY(0);
                 transform: translateY(0); }
-      .projects .projects__wrapper .projects__project:hover .project__info .project__name {
+      .projects .projects__wrapper .projects__project:focus .project__info .project__name, .projects .projects__wrapper .projects__project:hover .project__info .project__name {
         -webkit-transform: translateY(-250%);
             -ms-transform: translateY(-250%);
                 transform: translateY(-250%); }
@@ -617,7 +618,38 @@ template {
     color: #ffffff;
     font-family: "Open Sans", sans-serif;
     cursor: pointer;
-    margin-top: 10px; }
+    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    outline: none; }
+    .projects .projects__more-btn .more-btn__circle {
+      width: 0px;
+      height: 0px;
+      background: #cf6a85;
+      position: absolute;
+      z-index: -1;
+      border-radius: 50%;
+      -webkit-transition: width .3s ease-in, height .3s ease-in, -webkit-transform .3s .2s;
+      transition: width .3s ease-in, height .3s ease-in, -webkit-transform .3s .2s;
+      -o-transition: width .3s ease-in, height .3s ease-in, transform .3s .2s;
+      transition: width .3s ease-in, height .3s ease-in, transform .3s .2s;
+      transition: width .3s ease-in, height .3s ease-in, transform .3s .2s, -webkit-transform .3s .2s; }
+    .projects .projects__more-btn:focus .more-btn__circle, .projects .projects__more-btn:hover .more-btn__circle {
+      width: 30px;
+      height: 30px;
+      -webkit-transform: scale(5);
+          -ms-transform: scale(5);
+              transform: scale(5); }
 
 @media (min-width: 432px) {
   .projects .projects__wrapper .projects__project {
@@ -699,7 +731,12 @@ template {
       background: none;
       left: -15px;
       top: -15px;
-      outline: none; }
+      outline: none;
+      -webkit-transition: color .3s;
+      -o-transition: color .3s;
+      transition: color .3s; }
+      .project__modalContainer .modalContainer__modal .modal__close:focus, .project__modalContainer .modalContainer__modal .modal__close:hover {
+        color: #cccccc; }
     .project__modalContainer .modalContainer__modal .modal__image {
       width: 40%;
       height: 100%;
@@ -830,7 +867,12 @@ template {
       font-size: 20px;
       font-weight: 300;
       text-decoration: none;
-      cursor: pointer; }
+      cursor: pointer;
+      -webkit-transition: color .3s;
+      -o-transition: color .3s;
+      transition: color .3s; }
+      .contact .contact__information .information__link:focus, .contact .contact__information .information__link:hover {
+        color: #cccccc; }
     .contact .contact__information:last-of-type {
       margin-left: 20px; }
 
