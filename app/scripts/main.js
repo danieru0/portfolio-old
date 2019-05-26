@@ -62,38 +62,45 @@
 	}
 
 	function showProjectInfo(id, keyboard) {
-		modalContainer.classList.add('active');
 		fetch('../assets/projects.json')
-			.then(resp => resp.json())
+			.then(resp => {
+				if (resp.ok) {
+					return resp.json();
+				}
+				throw new Error('Something went wrong!');
+			})
 			.then(resp => {
 				let projectData = resp[id];
-				modalTitle.textContent = projectData.title;
-				modalDesc.textContent = projectData.description;
-				modalImage.style.backgroundImage = `url('${projectData.image}')`;
-				if (projectData.live !== 'None') {
-					modalLiveLink.style.display = 'inline';
-					modalLiveLink.href = projectData.live;
-				} else {
-					modalLiveLink.style.display = 'none';
-				}
-				if (projectData.src !== 'None') {
-					modalSrcLink.style.display = 'inline';
-					modalSrcLink.href = projectData.src;
-				} else {
-					modalSrcLink.style.display = 'none';
-				}
-				Object.keys(projectData.languages).map(item => {
-					let lang = projectData.languages[item];
-					let listItem = document.createElement('li');
-					listItem.classList.add('modal__item');
-					listItem.textContent = lang;
-					modalList.appendChild(listItem);
-				});
-				modal.classList.add('active');
-				if (keyboard) {
-					setTimeout(() => {
-						modalClose.focus();
-					}, 400);
+				if (projectData) {
+					modalContainer.classList.add('active');
+					modalTitle.textContent = projectData.title;
+					modalDesc.textContent = projectData.description;
+					modalImage.style.backgroundImage = `url('${projectData.image}')`;
+					if (projectData.live !== 'None') {
+						modalLiveLink.style.display = 'inline';
+						modalLiveLink.href = projectData.live;
+					} else {
+						modalLiveLink.style.display = 'none';
+					}
+					if (projectData.src !== 'None') {
+						modalSrcLink.style.display = 'inline';
+						modalSrcLink.href = projectData.src;
+					} else {
+						modalSrcLink.style.display = 'none';
+					}
+					Object.keys(projectData.languages).map(item => {
+						let lang = projectData.languages[item];
+						let listItem = document.createElement('li');
+						listItem.classList.add('modal__item');
+						listItem.textContent = lang;
+						modalList.appendChild(listItem);
+					});
+					modal.classList.add('active');
+					if (keyboard) {
+						setTimeout(() => {
+							modalClose.focus();
+						}, 400);
+					}
 				}
 			});
 	}
